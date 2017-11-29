@@ -30,13 +30,13 @@ export class FoodListComponent implements OnInit {
 
   addFavFood(foodFav, quantity:number){
     console.log(`${foodFav.name} añadido a lista`);
-    console.log(this.foods);
+    console.log(foodFav);
 
     if (quantity > 0){
     //  this.quantity = quantity;
       let prueba = parseInt(foodFav.quantity);
       foodFav.quantity =  prueba + quantity;
-      console.log(foodFav.quantity);
+      console.log(typeof(foodFav.quantity));
       this.calorieCounter += foodFav.calories*quantity;
       this.showCouter = true;
 
